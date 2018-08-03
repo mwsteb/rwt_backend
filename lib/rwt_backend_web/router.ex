@@ -7,6 +7,7 @@ defmodule RwtBackendWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug BasicAuth, use_config: {:rwt_backend, :basic_auth}
   end
 
   pipeline :api do

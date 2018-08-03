@@ -18,6 +18,12 @@ config :rwt_backend, RwtBackendWeb.Endpoint,
   url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
+  config :rwt_backend, basic_auth: [
+    username: {:system, "RWT_USERNAME"},
+    password: {:system, "RWT_PASSWORD"},
+    realm: "rwt"
+  ]
+
 # Do not print debug messages in production
 config :logger, level: :info
 
