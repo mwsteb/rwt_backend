@@ -13,6 +13,12 @@ config :rwt_backend, RwtBackendWeb.Endpoint,
   check_origin: false,
   watchers: []
 
+config :rwt_backend, basic_auth: [
+  username: "horse",
+  password: "porn",
+  realm: "rwt"
+]
+
 # ## SSL Support
 #
 # In order to use HTTPS in development, a self-signed
